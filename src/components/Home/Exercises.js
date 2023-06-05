@@ -7,7 +7,7 @@ import { Loader, ExerciseCard } from '../ReUse';
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const exercisesPerPage = 9;
+    const exercisesPerPage = 6;
 
     const indexOfLastExercise = currentPage * exercisesPerPage; // 1 * 6 it will be set again paginate
     const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage; // 6 - 6
