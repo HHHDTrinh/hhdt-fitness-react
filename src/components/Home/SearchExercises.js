@@ -47,9 +47,9 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
             <Typography
                 fontWeight={700}
-                sx={{ fontSize: { lg: '44px', xs: '30px' } }}
+                sx={{ fontSize: { lg: '44px', xs: '23px' } }}
                 mb="49px"
-                textAlign="center"
+                textAlign={{ xs: 'left', sm: 'center' }}
             >
                 Awesome Exercises You <br /> Should Know
             </Typography>
@@ -62,7 +62,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
                             border: 'none',
                             borderRadius: '4px',
                         },
-                        width: { lg: '1170px', xs: '350px' },
+                        width: { lg: '1170px', xs: '100%', sm: '550px' },
                         backgroundColor: '#fff',
                         borderRadius: '40px',
                     }}

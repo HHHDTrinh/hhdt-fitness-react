@@ -48,7 +48,10 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
     return (
         <Box id="exercises" sx={{ mt: { lg: '110px' } }} mt="50px" p="20px">
-            <Typography variant="h3" mb="46px">
+            <Typography
+                sx={{ typography: { xs: 'h4', lg: 'h3' } }}
+                mb={{ xs: '20px', sm: '46px' }}
+            >
                 Showing Results
             </Typography>
             <Stack
@@ -65,16 +68,36 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             </Stack>
             <Stack sx={{ mt: { lg: '114px', xs: '70px' } }} alignItems="center">
                 {exercises.length > 9 && (
-                    <Pagination
-                        shape="rounded"
-                        color="primary"
-                        defaultPage={1}
-                        count={Math.ceil(exercises.length / exercisesPerPage)}
-                        page={currentPage}
-                        // M.U.I auto change onChange={paginate} become onChange={(e) => paginate(e, value)}
-                        onChange={paginate}
-                        sx={{ size: { lg: 'large', xs: 'medium' } }}
-                    />
+                    <>
+                        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+                            <Pagination
+                                shape="rounded"
+                                color="primary"
+                                defaultPage={1}
+                                count={Math.ceil(
+                                    exercises.length / exercisesPerPage,
+                                )}
+                                page={currentPage}
+                                // M.U.I auto change onChange={paginate} become onChange={(e) => paginate(e, value)}
+                                onChange={paginate}
+                                size="large"
+                            />
+                        </Box>
+                        <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+                            <Pagination
+                                shape="rounded"
+                                color="primary"
+                                defaultPage={1}
+                                count={Math.ceil(
+                                    exercises.length / exercisesPerPage,
+                                )}
+                                page={currentPage}
+                                // M.U.I auto change onChange={paginate} become onChange={(e) => paginate(e, value)}
+                                onChange={paginate}
+                                size="small"
+                            />
+                        </Box>
+                    </>
                 )}
             </Stack>
         </Box>

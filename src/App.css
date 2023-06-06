@@ -105,6 +105,12 @@ body {
     text-decoration: none;
 }
 
+@media screen and (max-width: 600px) {
+    .exercise-video {
+        width: 100% !important;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .detail-image {
         width: 300px;
@@ -137,5 +143,14 @@ body {
 @media screen and (max-width: 400px) {
     .exercise-card {
         width: 280px;
+    }
+
+    .logo {
+        margin: 0 !important;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        display: none !important;
     }
 }

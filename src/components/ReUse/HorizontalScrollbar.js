@@ -12,7 +12,7 @@ const LeftArrow = () => {
 
     return (
         <Typography onClick={() => scrollPrev()} className="right-arrow">
-            <img src={LeftArrowIcon} alt="right-arrow" />
+            <img src={LeftArrowIcon} alt="left-arrow" />
         </Typography>
     );
 };
@@ -34,7 +34,7 @@ const HorizontalScrollbar = ({ data, bodyParts, setBodyPart, bodyPart }) => (
                 key={item.id || item}
                 itemId={item.id || item}
                 title={item.id || item}
-                m="0 40px"
+                m={{ xs: '0px 10px', sm: '0px 40px' }}
             >
                 {/* Nếu có bodyPart (statement) trong props thì mounted BodyPart component không thì mounted ExerciseCard component */}
                 {bodyParts ? (
